@@ -1,4 +1,4 @@
 all: TernaryTree
 
-TernaryTree: TernaryTree.cc
-	gcc -g -o TernaryTree TernaryTree.cc
+TernaryTree: Tree.cc
+	gcc -g -o Tree Tree.cc
