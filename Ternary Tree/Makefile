@@ -1,4 +1,4 @@
 all: TernaryTree
 
 TernaryTree: TernaryTree.cc
-    g++ TernaryTree.cc -o TernaryTree
+	gcc -g -o TernaryTree TernaryTree.cc
