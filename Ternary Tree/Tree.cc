@@ -12,7 +12,7 @@ Tree::Tree() {
 void Tree::insert(int val) {
 
     Node * n = (Node *) malloc (sizeof(Node));
-    
+
     if (root == NULL) {
         root->val = val;
         return;
@@ -20,33 +20,33 @@ void Tree::insert(int val) {
 
     Node * prev = NULL;
     Node * e = root;
-    int r = 0;
-    int l = 0;
-    int m = 0;
+    int right = 0;
+    int left = 0;
+    int mid = 0;
 
     while (e != NULL) {
-        r = 0;
-        l = 0;
-        m = 0;
+        right = 0;
+        left = 0;
+        mid = 0;
         prev = e;
         if (val > e-> val) {
             e = e->right;
-            r = 1;
+            right = 1;
         } else if (val < e->val) {
             e = e->left;
-            l = 1;
+            left = 1;
         } else {
             e = e->mid;
-            m = 1;
+            mid = 1;
         }
     }
 
     n->val = val;
-    if (r) {
+    if (right) {
         prev->right = n;
-    } else if (l) {
+    } else if (left) {
         prev->left = n;
-    } else if (m) {
+    } else if (mid) {
         prev->mid = n;
     }
 }
