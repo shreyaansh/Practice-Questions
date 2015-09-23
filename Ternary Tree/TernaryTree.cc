@@ -68,3 +68,7 @@ void Tree::insert(int val) {
 void Tree::remove(int val) {
 
 }
+
+void Tree::print() {
+    
+}
